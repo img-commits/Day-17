@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Scoreboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+<div class="bg-white shadow-xl rounded-2xl w-[900px] p-8">
+
+<h1 class="text-3xl font-bold text-center mb-6">
+Student Scoreboard
+</h1>
+
+<!-- Add Student -->
+<div class="flex gap-3 mb-6">
+<input id="nameInput" type="text" placeholder="Student Name"
+class="flex-1 border rounded-lg p-2">
+
+<input id="scoreInput" type="number" placeholder="Score"
+class="w-32 border rounded-lg p-2">
+
+<button id="addBtn"
+class="bg-blue-500 text-white px-4 rounded-lg hover:bg-blue-600 transition">
+Add
+</button>
+</div>
+
+<!-- Filter Section -->
+<div class="flex gap-3 mb-6">
+<input id="minScore" type="number" placeholder="Min Score"
+class="border rounded-lg p-2 w-32">
+
+<input id="maxScore" type="number" placeholder="Max Score"
+class="border rounded-lg p-2 w-32">
+
+<button id="filterBtn"
+class="bg-gray-800 text-white px-4 rounded-lg hover:bg-gray-900 transition">
+Filter
+</button>
+</div>
+
+<!-- Score Table -->
+<div class="bg-gray-50 rounded-xl shadow p-4">
+<table class="w-full text-left">
+<thead class="border-b">
+<tr>
+<th class="py-2">Student</th>
+<th class="py-2">Score</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody id="studentList"></tbody>
+</table>
+</div>
+
+<!-- Stats -->
+<div class="flex justify-between mt-6 font-semibold">
+<p>Total Students: <span id="totalStudents">0</span></p>
+<p>Class Average: <span id="averageScore">0</span></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
